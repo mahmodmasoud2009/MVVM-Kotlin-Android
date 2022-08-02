@@ -12,7 +12,7 @@ import com.task.ui.base.listeners.RecyclerItemListener
  */
 
 
-class RecipeViewHolder(private val itemBinding: RecipeItemBinding) : RecyclerView.ViewHolder(itemBinding.root) {
+class ProductViewHolder(private val itemBinding: RecipeItemBinding) : RecyclerView.ViewHolder(itemBinding.root) {
 
     fun bind(productItem: ProductsItem, recyclerItemListener: RecyclerItemListener) {
         itemBinding.tvCaption.text = productItem.name

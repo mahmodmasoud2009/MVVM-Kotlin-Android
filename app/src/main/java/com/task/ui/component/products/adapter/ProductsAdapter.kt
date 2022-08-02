@@ -13,7 +13,7 @@ import com.task.ui.component.products.ProductsListViewModel
  */
 
 
-class ProductsAdapter(private val recipesListViewModel: ProductsListViewModel, private val products: List<ProductsItem>) : RecyclerView.Adapter<RecipeViewHolder>() {
+class ProductsAdapter(private val recipesListViewModel: ProductsListViewModel, private val products: List<ProductsItem>) : RecyclerView.Adapter<ProductViewHolder>() {
 
     private val onItemClickListener: RecyclerItemListener = object : RecyclerItemListener {
         override fun onItemSelected(product: ProductsItem) {
@@ -21,12 +21,12 @@ class ProductsAdapter(private val recipesListViewModel: ProductsListViewModel, p
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val itemBinding = RecipeItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return RecipeViewHolder(itemBinding)
+        return ProductViewHolder(itemBinding)
     }
 
-    override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         holder.bind(products[position], onItemClickListener)
     }
 

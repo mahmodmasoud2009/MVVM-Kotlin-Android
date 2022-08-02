@@ -1,8 +1,5 @@
 package com.task.data.remote
 
-import com.google.gson.FieldNamingPolicy
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import com.task.BASE_URL
 import com.task.BuildConfig
 import okhttp3.Interceptor
@@ -10,7 +7,6 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.text.DateFormat
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Singleton
