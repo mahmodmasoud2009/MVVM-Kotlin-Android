@@ -15,7 +15,7 @@ import com.task.ui.base.listeners.RecyclerItemListener
 class ProductViewHolder(private val itemBinding: RecipeItemBinding) : RecyclerView.ViewHolder(itemBinding.root) {
 
     fun bind(productItem: ProductsItem, recyclerItemListener: RecyclerItemListener) {
-        itemBinding.tvCaption.text = productItem.name
+        itemBinding.tvCaption.text = productItem.price
         itemBinding.tvName.text = productItem.name
         Picasso.get().load(productItem.image_urls_thumbnails[0]).placeholder(R.drawable.ic_healthy_food).error(R.drawable.ic_healthy_food).into(itemBinding.ivRecipeItemImage)
         itemBinding.rlRecipeItem.setOnClickListener { recyclerItemListener.onItemSelected(productItem) }
