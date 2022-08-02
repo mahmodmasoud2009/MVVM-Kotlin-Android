@@ -14,10 +14,15 @@ sealed class Resource<T>(
     class DataError<T>(errorCode: Int) : Resource<T>(null, errorCode)
 
     override fun toString(): String {
-        return when (this) {
-            is Success<*> -> "Success[data=$data]"
-            is DataError -> "Error[exception=$errorCode]"
-            is Loading<T> -> "Loading"
+        return try{
+            when (this) {
+                is Success<*> -> "Success[data=$data]"
+                is DataError -> "Error[exception=$errorCode]"
+                is Loading<T> -> "Loading"
+            }
+        }catch(e: Exception){
+            "Error[exception=$errorCode]"
         }
+
     }
 }

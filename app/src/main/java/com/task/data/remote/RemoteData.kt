@@ -23,7 +23,7 @@ constructor(private val serviceGenerator: ServiceGenerator, private val networkC
                 Resource.Success(data = ProductResponse(response as List<ProductsItem>))
             }
             else -> {
-                Resource.DataError(errorCode = response as Int)
+                Resource.DataError(errorCode = 101)
             }
         }
     }
