@@ -9,5 +9,5 @@ import retrofit2.http.GET
 
 interface ProductService {
     @GET("dynamodb-writer/")
-    suspend fun fetchProducts(): Response<ProductResponse>
+    suspend fun fetchProducts(): ProductResponse
 }
